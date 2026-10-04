@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sara Alastuey</title>
+  <link rel="icon" type="image/gif" href="assets/icon/corazon.gif">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- TOP BAR (Nombre y Contacto) -->
+  <div class="top-bar">
+    <div class="top-bar-left">SARA ALASTUEY</div>
+    <div class="top-bar-right">
+      <div class="top-bar-right-nombre">
+        <p><strong>CONTACTO</strong></p>
+      </div> 
+      <div class="top-bar-right-resto">
+        <p>
+          salastueysahun@gmail.com<br>
+          @la.jeta<br>
+        </p>
+      </div>
+    </div>  
+  </div>
+
+  <!-- BARRA DE NAVEGACIÓN PRINCIPAL -->
+  <nav class="nav-categorias">
+    <button class="btn-filtro active" onclick="filtrarCategoria('todos', this)">TODOS</button>
+    <button class="btn-filtro" onclick="filtrarCategoria('instalacion', this)">INSTALACIÓN</button>
+    <button class="btn-filtro" onclick="filtrarCategoria('video', this)">VÍDEO</button>
+    <button class="btn-filtro" onclick="filtrarCategoria('interactividad', this)">INTERACTIVIDAD</button>
+    <button class="btn-filtro" onclick="filtrarCategoria('bio', this)">BIO</button>
+    <button class="btn-filtro" onclick="filtrarCategoria('cv', this)">CV</button>
+    <button class="btn-filtro" onclick="filtrarCategoria('contenido para terceros', this)">CONTENIDO PARA TERCEROS</button>
+  </nav>
+
+  <!-- CAJAS FIJAS FLOTANTES DEL HEADER -->
+  <div class="cajas-flotantes-header" style="top: 40px; left: 650px;">
+    HOLA! SOY SARA Y SOY ARTISTA LICENCIADA EN BELLAS ARTES Y ARTES MULTIMEDIA, ES DECIR <br> 
+    QUE HAGO ESCENOGRAFÍA, VIDEOARTE Y ESCULTURAS PERO CON MUCHOS CABLES!! <br> 
+    ME GUSTA BUSCAR LOS PORTALES ENTRE EL MUNDO FÍSICO Y EL DIGITAL E INVITAR A  <br> 
+    REFLEXIONAR LOS LIMITES Y TENSIONES ENTRE LA VIDA COTIDIANA Y TECNOLOGÍA.
+  </div>
+
+  <!-- CAJA CLICABLE PARA IR A BIO -->
+  <div class="cajas-flotantes-header caja-clicable-bio" style="top: 96px; left: 1000px;" onclick="irABio()">
+    UN POQUITO MÁS SOBRE MI... <br>
+  </div>
+
+  <!-- CONTENEDOR PRINCIPAL DINÁMICO -->
+  <main id="app-container" style="margin-top: 10px;"></main>
+
+  <!-- SCRIPTS EXTERNOS -->
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Función para activar el filtro de BIO y cambiar el estado visual del botón de la barra superior
+    function irABio() {
+      const botonBio = document.querySelector('button[onclick*="bio"]');
+      filtrarCategoria('bio', botonBio);
+    }
+  </script>
+</body>
+</html>

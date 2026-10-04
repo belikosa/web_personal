@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url(assets/fonts/NeueMachina-Light.otf) format('opentype'),
+       url(assets/fonts/NeueMachina-Regular.otf) format('opentype'),
+       url(assets/fonts/NeueMachina-Medium.otf) format('opentype'),
+       url(assets/fonts/NeueMachina-Bold.otf) format('opentype');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: #f3f3f3;
+  padding-top: 140px; 
+  color: #000;
+  position: relative;
+  min-height: 100vh;
+  cursor: url('assets/icon/Precision\ Select.cur'), auto;
+}
+
+/* Cursor personalizado */
+a, button, .btn-filtro, .nav-categorias button, .nav-categorias-cv button {
+  cursor: url('assets/icon/Unavailable.cur'), pointer !important;
+}
+
+/* PRIMERA BARRA: TOP BAR (Escritorio) */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background: #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  border-bottom: 0.25px solid #000;
+  z-index: 1000;
+}
+
+.top-bar-left {
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: 'Neue Machina', sans-serif;
+  font-stretch: ultra-condensed;
+  letter-spacing: -1px;
+  display: inline-block;
+  transform: scaleY(1.3);
+}
+
+.top-bar-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0.5rem 2rem;
+}
+
+.top-bar-right-nombre {
+  font-size: 0.8rem;
+  font-family: 'Neue Machina', sans-serif;
+  font-stretch: ultra-condensed;
+  letter-spacing: -1px;
+  transform: scaleY(1.3);
+}
+
+.top-bar-right-resto {
+  font-size: 0.7rem;
+  font-family: 'Roboto Mono', monospace;
+  text-align: right;
+  font-stretch: ultra-condensed;
+  letter-spacing: -1px;
+}
+
+/* BARRA PRINCIPAL DE CATEGORÍAS */
+.nav-categorias {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  background: #f3f3f3;
+  padding: 0.6rem 2rem;
+  border-bottom: 0.5px solid #000;
+  z-index: 1001;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-categorias button {
+  background: none;
+  border: none;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: #000;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.nav-categorias button:hover,
+.nav-categorias button.active {
+  opacity: 1;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* SEGUNDA BARRA EXCLUSIVA PARA EL CV */
+.nav-categorias-cv {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  background: #f3f3f3;
+  padding: 0.6rem 2rem;
+  border-bottom: 0.5px solid #000;
+  z-index: 1000;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-categorias-cv button {
+  background: none;
+  border: none;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: #000;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.nav-categorias-cv button:hover,
+.nav-categorias-cv button.active {
+  opacity: 1;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ESTRUCTURA DE SECCIONES EN DOS COLUMNAS (ESCRITORIO) */
+.seccion-proyecto {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+  min-height: auto;
+  margin-bottom: 10px;
+  padding: 0 2rem;
+}
+
+.seccion-proyecto header {
+  width: 420px;
+  flex-shrink: 0;
+}
+
+.subhead {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+  font-family: 'Neue Machina', sans-serif;
+  font-stretch: ultra-condensed;
+  letter-spacing: -1px;
+  transform: scaleY(1.3);
+}
+
+.description {
+  font-size: 0.7rem;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+  margin-left: 0;
+}
+
+.description a {
+  color: #000;
+}
+
+.galeria-contenedor {
+  position: relative;
+  flex-grow: 1;
+  min-height: 0px; 
+  pointer-events: auto;
+}
+
+#primera-seccion .galeria-contenedor { min-height: 0px; } /* statement */
+#segunda-seccion .galeria-contenedor { min-height: 520px; } /* BIO */
+#tercera-seccion .galeria-contenedor { min-height: 0px; } /* reboot */
+#cuarta-seccion .galeria-contenedor { min-height: 50px; } /* veo veo */
+#quinta-seccion .galeria-contenedor { min-height: 0px; } /* PLUTO */
+#sexta-seccion .galeria-contenedor { min-height: 0px; } /* tu primer millon */
+#septima-seccion .galeria-contenedor { min-height: 500px; } /* digital entities */
+#octava-seccion .galeria-contenedor { min-height: 780px; } /* xenogenesis */
+#novena-seccion .galeria-contenedor { min-height: 0px; } /* DOSIS */
+#decima-seccion .galeria-contenedor { min-height: 380px; } /* plant spectra */
+#undecima-seccion .galeria-contenedor { min-height: 280px; } /* visuals */
+#seccion-videoclip .galeria-contenedor { min-height: 350px; } /* videoclip */
+#seccion-instagram .galeria-contenedor { min-height: 0px; } /* instagram */
+#seccion-redes .galeria-contenedor { min-height: 0px; } /* redes */
+
+.draggable-image {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  z-index: 100;
+  user-select: none;
+}
+
+/* Imágenes que abren un enlace externo (p. ej. videoclip) */
+.draggable-image.enlace-externo {
+  cursor: url('assets/icon/Unavailable.cur'), pointer !important;
+}
+
+/* SECCIÓN INSTAGRAM: texto a la izquierda y los vídeos a la derecha, en una fila.
+   Cada embed se dibuja a su tamaño nativo (326px, el mínimo de Instagram) y main.js lo
+   encoge con transform: scale hasta el ancho de su caja, así caben 4 sin deformarse. */
+#seccion-instagram {
+  --ig-base: 326;   /* ancho nativo del embed, en px */
+  --ig-alto: 640;   /* alto nativo del embed, en px: sube o baja si sobra o falta espacio */
+}
+
+#seccion-instagram .instagram-box {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: calc(var(--ig-base) * 1px);   /* nunca más grandes que su tamaño nativo */
+  aspect-ratio: var(--ig-base) / var(--ig-alto);
+}
+
+#seccion-instagram .instagram-box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--ig-base) * 1px);
+  height: calc(var(--ig-alto) * 1px);
+  border: 0;
+  transform-origin: 0 0;
+}
+
+@media (min-width: 901px) {
+  #seccion-instagram .galeria-contenedor {
+    flex: 1 1 0;          /* ocupa el hueco a la derecha del texto */
+    min-width: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  #seccion-instagram .instagram-box {
+    flex: 1 1 0;          /* todos del mismo ancho, repartiéndose el hueco */
+    min-width: 0;
+    width: auto;
+  }
+}
+
+/* Soporte específico para iframe (YouTube) */
+iframe.draggable-image {
+  border: none;
+  max-width: 100%;
+}
+
+.cajas-flotantes-header {
+  position: absolute;
+  border: 1px solid #000;
+  background-color: #ffffff;
+  font-family: 'Helvetica', monospace;
+  padding: 0.2rem;
+  color: #000;
+  font-size: 0.7rem;
+  border-radius: 0px;
+  text-align: justify;
+  box-sizing: border-box;
+  outline: none;
+  z-index: 9999; 
+  display: inline-block; 
+}
+
+.cajas-flotantes-header.caja-clicable-bio {
+  cursor: url('assets/icon/Unavailable.cur'), pointer !important;
+  transition: background-color 0.2s ease;
+}
+
+.cajas-flotantes-header.caja-clicable-bio:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.text-box {
+  position: absolute;
+  border: 1px solid #000;
+  background-color: #ffffff;
+  font-family: 'Helvetica', monospace;
+  padding: 0.2rem;
+  color: #000;
+  font-size: 0.7rem;
+  border-radius: 0px;
+  text-align: justify;
+  box-sizing: border-box;
+  outline: none;
+  z-index: 900;
+  display: inline-block; 
+}
+
+.text-elipse {
+  position: absolute;
+  border: 1px solid #000;
+  background-color: #ffffff;
+  font-family: 'Helvetica', monospace;
+  padding: 0.5rem;
+  color: #000;
+  font-size: 0.7rem;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  z-index: 900;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border-style: dotted;
+  overflow: hidden;
+}
+
+.separador {
+  width: 100%;
+  height: 0.5px;
+  background-color: #000;
+  margin: 50px 0;
+  flex-basis: 100%;
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVE (MÓVILES Y TABLETS)
+   ========================================== */
+@media (max-width: 900px) {
+  body {
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
+
+  .top-bar {
+    height: auto;
+    min-height: 55px;
+    padding: 0.4rem 1rem;
+    align-items: center;
+  }
+
+  .top-bar-left {
+    font-size: 1.4rem;
+    transform: none;
+    line-height: 1.1;
+  }
+
+  .top-bar-right {
+    padding: 0;
+  }
+
+  .top-bar-right-nombre {
+    font-size: 0.7rem;
+    transform: none;
+  }
+
+  .top-bar-right-resto {
+    font-size: 0.6rem;
+  }
+
+  .nav-categorias {
+    top: 55px;
+    padding: 0.5rem 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    width: 100vw;
+  }
+
+  .nav-categorias-cv {
+    top: 90px; 
+    padding: 0.5rem 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    width: 100vw;
+  }
+
+  .nav-categorias::-webkit-scrollbar,
+  .nav-categorias-cv::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cajas-flotantes-header {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: calc(100% - 2rem) !important;
+    margin: 10px 1rem !important;
+    display: block !important;
+  }
+
+  .seccion-proyecto {
+    flex-direction: column;
+    padding: 0 1rem;
+    gap: 15px;
+  }
+
+  .seccion-proyecto header {
+    width: 100%;
+  }
+
+  .subhead {
+    transform: none;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .galeria-contenedor {
+    width: 100%;
+    min-height: auto !important;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .draggable-image,
+  .text-box, 
+  .text-elipse {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+  iframe.draggable-image {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    height: 220px !important;
+    margin: 0 !important;
+  }
+
+
+  .text-elipse {
+    border-radius: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 105px;
+  }
+
+  .top-bar-left {
+    font-size: 1.1rem;
+  }
+
+  .top-bar-right-resto {
+    font-size: 0.55rem;
+  }
+}
