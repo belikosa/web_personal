@@ -10,7 +10,7 @@ const secciones = [
     ],
     elementos: [
         { tipo: "box", texto: "FOTOGRAFÍA DE JULIA G. ARTERO. SOLDANDO CABLES EN EL SALÓN DE CASA.", top: "390px", left: "25vw" },
-        { tipo: "img", src: "assets/img/JULS/DSC_0355.JPG", top: "10px", left: "7vw", width: "600px" }
+        { tipo: "img", src: "assets/img/juls/DSC_0355.JPG", top: "10px", left: "7vw", width: "600px" }
     ]
   },
   {
@@ -217,18 +217,12 @@ const secciones = [
         left: "5vw", 
         width: "560px"
       },
-      { 
-        tipo: "box", 
-        texto: "SECA X LA JETA <br> CLICK EN LA IMAGEN PARA VER EL VIDEOCLIP", 
-        top: "340px", 
-        left: "5vw" 
-      }
-    ]
+    ],
   },
   {
     id: "seccion-instagram",
-    categoria: ["VIDEO"],
-    subhead: "TÍTULO DEL PROYECTO<br>AÑO",
+    categoria: ["CONTENIDO PARA TERCEROS"],
+    subhead: "CONTENDIO PARA REDES<br>2025",
     descripciones: [
       "Escribe aquí la descripción del proyecto."
     ],
