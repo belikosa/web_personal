@@ -9,6 +9,9 @@ function normalizarTexto(texto) {
     .trim();
 }
 
+// Secciones que NO se muestran en la pestaña TODOS (siguen saliendo en sus propias categorías)
+const OCULTAS_EN_TODOS = ['seccion-videoclip', 'seccion-instagram'];
+
 async function renderizarSecciones() {
   const container = document.getElementById('app-container');
   if (!container) return;
@@ -59,6 +62,9 @@ async function renderizarSecciones() {
       // Excluir BIO y CV de 'todos' (el contenido para terceros SÍ se muestra)
       const esBioOCv = catsNormalizadas.some(cat => cat === 'bio' || cat === 'cv');
       if (esBioOCv) return false;
+
+      // Ocultar las secciones indicadas en OCULTAS_EN_TODOS
+      if (OCULTAS_EN_TODOS.includes(sec.id)) return false;
 
       return true;
     }
