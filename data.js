@@ -228,11 +228,11 @@ const secciones = [
     descripciones: [
       "Contenido para redes en formato reel para el espacio independiente Pluto.",
       " Link a las publicaciones:",
-      " Pluto por bucles: https://www.instagram.com/p/DAtj5J_NR9S/",
-      "Casa de aperos: https://www.instagram.com/p/DDe1KSBKUE9/",
-      " pillow talk: https://www.instagram.com/p/DN5K3kkDWZV/",
-      " open call miss espacial: https://www.instagram.com/p/DFLe2pWOO11/",
-      " pluticlub: https://www.instagram.com/p/DSDCX2ADcnw/ "
+      " <a href=\"https://www.instagram.com/p/DAtj5J_NR9S/ target=\"_blank\ Festival 'Bucles'",
+      " <a href=\"https://www.instagram.com/p/DDe1KSBKUE9/ target=\"_blank\ Evento 'Huerta Abierta'",
+      " <a href=\"https://www.instagram.com/p/DN5K3kkDWZV/ target=\"_blank\ Performance Prayer Pillow por la artista",
+      " <a href=\"https://www.instagram.com/p/DFLe2pWOO11/ target=\"_blank\ Open Call para Arquitectos 'Casa Aperos'",
+      " <a href=\"https://www.instagram.com/p/DSDCX2ADcnw/ target=\"_blank\ Evento de música electrónica 'PlutiClub'"
     ],
     elementos: [
       {tipo: "video", src: "assets/video/reels/apreos.mp4", top: "0px", left: "0vw", width: "250px", link: "https://www.instagram.com/p/DH8F28VqeFb/", alt: "Ver publicación en Instagram"},
