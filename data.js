@@ -56,9 +56,9 @@ const secciones = [
     subhead: "VEO VEO, ¿QUÉ VES?<br> OBRA GANADORA CERTAMEN PAM!26, 2026",
     descripciones: [
       "Veo veo... ¿Qué ves? es una instalación descentralizada formada por dos piezas situadas en diferentes espacios de la muestra PAM26. Funciona como un único dispositivo cuyo funcionamiento se hace visible a medida que el espectador realiza el recorrido entre ambas piezas. Sin un orden específico ni una ruta recomendada, introduce al espectador en un circuito de vigilancia en el que no se sabe dónde comienza, dónde acaba ni qué papel ocupamos dentro de él.",
-      "La primera estancia, una habitación tapiada que solo puede observarse a través de un pequeño agujero, sitúa al espectador frente a un dispositivo de videovigilancia que recoge su mirada y registra lo que sucede dentro y fuera de la sala. Esta información se transmite a una segunda estancia, planteada como una garita de control, donde el espectador puede observar las imágenes recogidas. Sin embargo, desde este mismo espacio también está siendo monitorizado y su imagen es devuelt a la primera estancia.",
+      "La primera estancia, una habitación tapiada que solo puede observarse a través de un pequeño agujero, sitúa al espectador frente a un dispositivo de videovigilancia que recoge su mirada y registra lo que sucede dentro y fuera de la sala. Esta información se transmite a una segunda estancia, planteada como una garita de control, donde el espectador puede observar las imágenes recogidas. Sin embargo, desde este mismo espacio también está siendo monitorizado y su imagen es devuelta a la primera estancia.",
       "De esta forma, observar y ser observado no aparecen como posiciones opuestas, sino como partes de una misma dinámica. La instalación busca reproducir algunas lógicas de los sistemas contemporáneos de vigilancia e hiperconectividad, donde los roles de observador y observado son intercambiables y los límites del dispositivo permanecen ocultos.<br><br>Aunque las piezas están físicamente separadas, funcionan como una única estructura gracias a la circulación de imágenes a través de Internet. El espectador entra voluntariamente en este sistema: participa por curiosidad, interactúa con otras personas y juega con el dispositivo. Esta participación, aparentemente inocente, es precisamente la que hace funcionar el sistema y permite experimentar estas dinámicas en primera persona."
-    ],
+  ],
     elementos: [
       { tipo: "img", src: "assets/img/veoveo/img_2453.jpg", top: "5px", left: "3vw", width: "500px" },
       { tipo: "img", src: "assets/img/veoveo/img_2472.jpg", top: "20px", left: "35vw", width: "320px" },
@@ -114,7 +114,7 @@ const secciones = [
     categoria: "EXPOSICIONES",
     subhead: "DIGITAL ENTITIES<br> EXPOSICIÓNN EN FANTASTIK LAB, 2024",
     descripciones: [
-      "Digital Entities explora las posibilidades de nuevas realidades donde las fronteras digitales y físicas son cada vez más difusas. Las artistas invitan a los espectadores a reflexionar sobre cómo nuestros cuerpos y conceptos de identidad han trascendido su forma orgánica para habitar el ciberespacio. La exposición aborda temas como la conexión entre seres humanos y dispositivos, la formación de comunidades descentralizadas en la web y la redefinición de la identidad en un mundo híbrido de carne y máquina.",
+      "Digital Entities</strong> explora las posibilidades de nuevas realidades donde las fronteras digitales y físicas son cada vez más difusas. Las artistas invitan a los espectadores a reflexionar sobre cómo nuestros cuerpos y conceptos de identidad han trascendido su forma orgánica para habitar el ciberespacio. La exposición aborda temas como la conexión entre seres humanos y dispositivos, la formación de comunidades descentralizadas en la web y la redefinición de la identidad en un mundo híbrido de carne y máquina.",
       "Las obras combinan técnicas digitales y analógicas, creando un diálogo entre lo físico y lo virtual. A través de esta hibridación de medios, ofrecen una perspectiva futurista y expansiva en la que lo humano y lo tecnológico coexisten en simbiosis.",
       "<br>Exposición en <a href=\"https://www.fantastiklab.cc/2024/06/06/digital-entities/\" target=\"_blank\">Fantastik Lab</a>"
     ],
@@ -152,7 +152,7 @@ const secciones = [
   { 
     id: "decima-seccion",
     categoria: "INTERACTIVIDAD",
-    subhead: "PLANT SPECTRA <br> SISTEMA AUTOMATIZADO DE HIDROPONÍA Y VISUALIZACIÓN DE DATOS, 2025",
+    subhead: "PANT SPECTRA <br> SISTEMA AUTOMATIZADO DE HIDROPONÍA Y VISUALIZACIÓN DE DATOS, 2025",
     descripciones: [
       "El proyecto presenta un sistema en desarrollo que explora la interacción flora-machina, con el objetivo de eliminar la intervención humana directa. Se centra en la sensibilidad de las plantas, capturada a través de sensores que detectan sus estados y permiten visualizar estos datos en una web de forma interactiva.",
       "Estamos hablando por lo tanto de un sistema de hidroponía automatizada en el que los sensores gestionan de manera autónoma la nutrición y el ambiente de las plantas sin necesidad de intervención humana.",
@@ -163,7 +163,7 @@ const secciones = [
       { tipo: "video", src: "assets/video/grabación de pantalla 2025-01-12 192749.mp4", top: "1px", left: "30vw", width: "440px" },
       { tipo: "video", src: "assets/video/video-muestra-web.mp4", top: "205px", left: "30vw", width: "440px" },
       { tipo: "box", texto: "PARTICIPAN ALICIA EZPELETA, <br> ANDRÉS CUESTA Y SARA ALASTUEY. <br>", top: "5px", left: "240px" },
-      { tipo: "text-elipse", texto: "WIP", top: "340px", left: "0px" }
+      { tipo: "text-elipse", texto: "WIP", top: "340px", left: "0px" },
     ]
   },
   { 
@@ -203,20 +203,22 @@ const secciones = [
   {
     id: "seccion-videoclip",
     categoria: ["CONTENIDO PARA TERCEROS", "VIDEO"],
-    subhead: "VOLVER<br>VIDEOCLIP, 2025",
+    subhead: "VOLVER - GAZELLA<br>VIDEOCLIP, 2025",
     descripciones: [
-      "Una película de SECA & LA JETA. <br> Dirección de arte y producción de Alicia Ezpeleta y Sara Alastuey. <br> Dirección de fotografía, montaje y color de la mano de Cristina G. de Castro. <br> Maquillaje por Sara Alastuey. Estilismo por Sara Alastuey y Alicia Ezpeleta, vestido hecho a mano de Lola Conesa <br> Bailarina: Beatriz Ribas. <br> Agradecimientos Pluto por prestarnos su espacio."
+      "Para el videoclip de 'Volver', canción del segundo disco de Gazella 'Entre Vías', se presenta una propuesta visual de SECA & LA JETA. <br> Dirección de arte y producción de Alicia Ezpeleta y Sara Alastuey. <br> Dirección de fotografía, montaje y color de la mano de Cristina G. de Castro. <br> Maquillaje por Sara Alastuey. <br> Estilismo por Alicia Ezpeleta y Sara Alastuey <br> Vestido hecho a mano de Lola Conesa <br> Bailarina Beatriz Ribas. <br> Agradecimientos a Pluto por prestarnos su espacio."
     ],
     elementos: [
       { 
         tipo: "img", 
-        src: "https://img.youtube.com/vi/F3B9IPK4V40/maxresdefault.jpg", // cambia por tu foto, p. ej. "assets/img/volver_portada.jpg"
+        src: "https://img.youtube.com/vi/F3B9IPK4V40/maxresdefault.jpg",
         link: "https://youtu.be/F3B9IPK4V40",
-        alt: "Ver videoclip VOLVER en YouTube",
+        alt: "Ver videoclip 'Volver' en YouTube",
         top: "10px", 
         left: "5vw", 
-        width: "560px"
+        width: "590px"
       },
+      { tipo: "img", src: "assets/img/volver/Snapinst.app_479975627_18305904040224081_366310093825296481_n_1080.jpg", top: "30px", left: "40vw", width: "300px" },
+      { tipo: "img", src: "assets/img/volver/Snapinst.app_472627973_18305904064224081_8739043547873047489_n_1080 - copia.jpg", top: "200px", left: "42vw", width: "280px" }, 
     ],
   },
   {
@@ -224,14 +226,20 @@ const secciones = [
     categoria: ["CONTENIDO PARA TERCEROS"],
     subhead: "CONTENDIO PARA REDES<br>2025",
     descripciones: [
-      "Escribe aquí la descripción del proyecto."
+      "Contenido para redes en formato reel para el espacio independiente Pluto.",
+      " Link a las publicaciones:",
+      " Pluto por bucles: https://www.instagram.com/p/DAtj5J_NR9S/",
+      "Casa de aperos: https://www.instagram.com/p/DDe1KSBKUE9/",
+      " pillow talk: https://www.instagram.com/p/DN5K3kkDWZV/",
+      " open call miss espacial: https://www.instagram.com/p/DFLe2pWOO11/",
+      " pluticlub: https://www.instagram.com/p/DSDCX2ADcnw/ "
     ],
     elementos: [
-      // Se reparten solos en una fila a la derecha del texto (ver #seccion-instagram en styles.css). Para quitar uno, borra su línea.
-      { tipo: "instagram", url: "https://www.instagram.com/p/DAtj5J_NR9S/" },
-      { tipo: "instagram", url: "https://www.instagram.com/p/DDe1KSBKUE9/" },
-      { tipo: "instagram", url: "https://www.instagram.com/p/DH8F28VqeFb/" },
-      { tipo: "instagram", url: "https://www.instagram.com/p/DN5K3kkDWZV/" }
+      {tipo: "video", src: "assets/video/reels/apreos.mp4", top: "0px", left: "0vw", width: "250px", link: "https://www.instagram.com/p/DH8F28VqeFb/", alt: "Ver publicación en Instagram"},
+      {tipo: "video", src: "assets/video/reels/plutoxbucles.mp4", top: "0px", left: "16vw", width: "250px", link: "https://www.instagram.com/p/DAtj5J_NR9S/", alt: "Ver publicación en Instagram"},	
+      {tipo: "video", src: "assets/video/reels/huerta_abierta.mp4", top: "0px", left: "33vw", width: "250px", link:  "https://www.instagram.com/p/DDe1KSBKUE9/", alt: "Ver publicación en Instagram"},
+      {tipo: "video", src: "assets/video/reels/prayerpillow.mp4", top: "0px", left: "50vw", width: "250px", link: "https://www.instagram.com/p/DN5K3kkDWZV/", alt: "Ver publicación en Instagram"}
+
     ]
   }
 ];

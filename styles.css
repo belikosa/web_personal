@@ -19,6 +19,7 @@ body {
   font-family: 'Roboto Mono', monospace;
   background: #f3f3f3;
   padding-top: 140px; 
+  padding-bottom: 100px;   /* espacio al final de la web, para que no quede pegada a la barra del sistema */
   color: #000;
   position: relative;
   min-height: 100vh;
@@ -344,7 +345,7 @@ iframe.draggable-image {
 @media (max-width: 900px) {
   body {
     padding-top: 110px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
 
   .top-bar {

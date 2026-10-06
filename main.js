@@ -12,6 +12,21 @@ function normalizarTexto(texto) {
 // Secciones que NO se muestran en la pestaña TODOS (siguen saliendo en sus propias categorías)
 const OCULTAS_EN_TODOS = ['seccion-videoclip', 'seccion-instagram'];
 
+// Si el elemento (img o video) tiene "link" en data.js, al hacer click abre ese enlace en pestaña nueva
+function hacerEnlace(el, item) {
+  if (!item.link) return;
+  const texto = item.alt || 'Abrir enlace';
+  el.title = texto;
+  el.setAttribute('aria-label', texto);
+  if (el.tagName === 'IMG') el.alt = texto;
+  el.classList.add('enlace-externo');
+  el.tabIndex = 0;
+  el.setAttribute('role', 'link');
+  const abrir = () => window.open(item.link, '_blank', 'noopener');
+  el.addEventListener('click', abrir);
+  el.addEventListener('keydown', e => { if (e.key === 'Enter') abrir(); });
+}
+
 async function renderizarSecciones() {
   const container = document.getElementById('app-container');
   if (!container) return;
@@ -107,17 +122,7 @@ async function renderizarSecciones() {
           el = document.createElement('img');
           el.src = item.src;
           el.className = 'draggable-image';
-          // Si la imagen tiene "link" en data.js, al hacer click abre ese enlace en pestaña nueva
-          if (item.link) {
-            el.alt = item.alt || 'Ver vídeo';
-            el.title = item.alt || 'Ver vídeo';
-            el.classList.add('enlace-externo');
-            el.tabIndex = 0;
-            el.setAttribute('role', 'link');
-            const abrir = () => window.open(item.link, '_blank', 'noopener');
-            el.addEventListener('click', abrir);
-            el.addEventListener('keydown', e => { if (e.key === 'Enter') abrir(); });
-          }
+          hacerEnlace(el, item);
         } else if (item.tipo === 'video') {
           el = document.createElement('video');
           el.src = item.src;
@@ -126,6 +131,7 @@ async function renderizarSecciones() {
           el.muted = true;
           el.playsInline = true;
           el.className = 'draggable-image';
+          hacerEnlace(el, item);
         } else if (item.tipo === 'youtube') {
           el = document.createElement('iframe');
           
