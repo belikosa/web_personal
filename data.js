@@ -232,7 +232,7 @@ const secciones = [
       " <a href=\"https://www.instagram.com/p/DDe1KSBKUE9/ target=\"_blank\ Evento 'Huerta Abierta'",
       " <a href=\"https://www.instagram.com/p/DN5K3kkDWZV/ target=\"_blank\ Performance Prayer Pillow por la artista Jas Lin",
       " <a href=\"https://www.instagram.com/p/DFLe2pWOO11/ target=\"_blank\ Open Call para Arquitectos 'Casa Aperos'",
-      " <a href=\"https://www.instagram.com/p/DSDCX2ADcnw/ target=\"_blank\ Evento de música electrónica 'PlutiClub'"
+      " <a href=\"https://www.instagram.com/p/DSDCX2ADcnw/ target=\"_blank\ Evento de música electrónica 'PlutiClub'",
     ],
     elementos: [
       {tipo: "video", src: "assets/video/reels/apreos.mp4", top: "0px", left: "0vw", width: "250px", link: "https://www.instagram.com/p/DH8F28VqeFb/", alt: "Ver publicación en Instagram"},
