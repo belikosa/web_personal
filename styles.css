@@ -280,7 +280,7 @@ iframe.draggable-image {
   text-align: justify;
   box-sizing: border-box;
   outline: none;
-  z-index: 9999; 
+  z-index: 10000; 
   display: inline-block; 
 }
 
