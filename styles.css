@@ -203,7 +203,7 @@ a, button, .btn-filtro, .nav-categorias button, .nav-categorias-cv button {
 #decima-seccion .galeria-contenedor { min-height: 380px; } /* plant spectra */
 #undecima-seccion .galeria-contenedor { min-height: 280px; } /* visuals */
 #seccion-videoclip .galeria-contenedor { min-height: 350px; } /* videoclip */
-#seccion-instagram .galeria-contenedor { min-height: 0px; } /* instagram */
+#seccion-instagram .galeria-contenedor { min-height: 480px; } /* instagram: vídeos de 250px de ancho en formato reel (~445px de alto) */
 #seccion-redes .galeria-contenedor { min-height: 0px; } /* redes */
 
 .draggable-image {
