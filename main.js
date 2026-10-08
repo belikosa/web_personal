@@ -27,10 +27,29 @@ function hacerEnlace(el, item) {
   el.addEventListener('keydown', e => { if (e.key === 'Enter') abrir(); });
 }
 
+// Los vídeos solo se descargan y reproducen cuando están cerca de la pantalla
+// (así la web no baja todos los MB de golpe al entrar)
+let observadorVideos = null;
+if ('IntersectionObserver' in window) {
+  observadorVideos = new IntersectionObserver(entradas => {
+    entradas.forEach(entrada => {
+      const v = entrada.target;
+      if (entrada.isIntersecting) {
+        if (!v.getAttribute('src')) v.src = v.dataset.src;
+        const p = v.play();
+        if (p && p.catch) p.catch(() => {});
+      } else {
+        v.pause();
+      }
+    });
+  }, { rootMargin: '300px 0px' });
+}
+
 async function renderizarSecciones() {
   const container = document.getElementById('app-container');
   if (!container) return;
   container.innerHTML = '';
+  if (observadorVideos) observadorVideos.disconnect();
 
   const catSelNormalizada = normalizarTexto(categoriaSeleccionada);
 
@@ -120,18 +139,26 @@ async function renderizarSecciones() {
         let el;
         if (item.tipo === 'img') {
           el = document.createElement('img');
+          el.loading = 'lazy';      // no descarga la imagen hasta que está cerca de la pantalla
+          el.decoding = 'async';
           el.src = item.src;
           el.className = 'draggable-image';
           hacerEnlace(el, item);
         } else if (item.tipo === 'video') {
           el = document.createElement('video');
-          el.src = item.src;
-          el.autoplay = true;
           el.loop = true;
           el.muted = true;
           el.playsInline = true;
+          el.preload = 'none';
           el.className = 'draggable-image';
           hacerEnlace(el, item);
+          if (observadorVideos) {
+            el.dataset.src = item.src;      // el src se pone cuando el vídeo está a la vista
+            observadorVideos.observe(el);
+          } else {
+            el.autoplay = true;             // navegadores antiguos: como antes
+            el.src = item.src;
+          }
         } else if (item.tipo === 'youtube') {
           el = document.createElement('iframe');
           
@@ -253,4 +280,32 @@ function filtrarCV(categoria, el) {
 // Ejecutar al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
   renderizarSecciones();
+});
+
+// ==========================================
+// LOADER
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("loader");
+  const percentage = document.querySelector(".loader-percentage");
+
+  if (!loader || !percentage) return;
+
+  let progress = 0;
+
+  const loading = setInterval(() => {
+    progress++;
+
+    percentage.textContent = `${progress}%`;
+
+    if (progress >= 100) {
+      clearInterval(loading);
+
+      // Esperamos un poquito antes de quitar el loader
+      setTimeout(() => {
+        loader.classList.add("loaded");
+      }, 300);
+    }
+  }, 30);
 });
