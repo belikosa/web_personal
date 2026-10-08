@@ -224,16 +224,16 @@ const secciones = [
   {
     id: "seccion-instagram",
     categoria: ["CONTENIDO PARA TERCEROS"],
-    subhead: "CONTENDIO PARA REDES<br>2025",
+    subhead: "CONTENIDO PARA REDES<br>2025",
     descripciones: [
       "Contenido para redes en formato reel para el espacio independiente Pluto.",
-      " Link a las publicaciones:",
-      " <a href=\"https://www.instagram.com/p/DAtj5J_NR9S/", "target=\"_blank\ Festival 'Bucles'",
-      " <a href=\"https://www.instagram.com/p/DDe1KSBKUE9/", "target=\"_blank\ Evento 'Huerta Abierta'",
-      " <a href=\"https://www.instagram.com/p/DN5K3kkDWZV/", "target=\"_blank\ Performance Prayer Pillow por la artista Jas Lin",
-      " <a href=\"https://www.instagram.com/p/DFLe2pWOO11/", "target=\"_blank\ Open Call para Arquitectos 'Casa Aperos'",
-      " <a href=\"https://www.instagram.com/p/DSDCX2ADcnw/", "target=\"_blank\ Evento de música electrónica 'PlutiClub'",
-    ],
+      "Link a las publicaciones:",
+      "<a href=\"https://www.instagram.com/p/DAtj5J_NR9S/\" target=\"_blank\" rel=\"noopener\">Festival 'Bucles'</a>",
+      "<a href=\"https://www.instagram.com/p/DDe1KSBKUE9/\" target=\"_blank\" rel=\"noopener\">Evento 'Huerta Abierta'</a>",
+      "<a href=\"https://www.instagram.com/p/DN5K3kkDWZV/\" target=\"_blank\" rel=\"noopener\">Performance Prayer Pillow por la artista Jas Lin</a>",
+      "<a href=\"https://www.instagram.com/p/DFLe2pWOO11/\" target=\"_blank\" rel=\"noopener\">Open Call para Arquitectos 'Casa Aperos'</a>",
+      "<a href=\"https://www.instagram.com/p/DSDCX2ADcnw/\" target=\"_blank\" rel=\"noopener\">Evento de música electrónica 'PlutiClub'</a>"
+    ],   
     elementos: [
       {tipo: "video", src: "assets/video/reels/apreos.mp4", top: "0px", left: "0vw", width: "250px", link: "https://www.instagram.com/p/DH8F28VqeFb/", alt: "Ver publicación en Instagram"},
       {tipo: "video", src: "assets/video/reels/plutoxbucles.mp4", top: "0px", left: "16vw", width: "250px", link: "https://www.instagram.com/p/DAtj5J_NR9S/", alt: "Ver publicación en Instagram"},	
